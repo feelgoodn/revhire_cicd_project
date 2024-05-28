@@ -1,0 +1,13 @@
+# Service definition  
+apiVersion: v1
+kind: Service
+metadata:
+  name: revhireapp-svc
+spec:
+  selector:
+    app: revhire-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 4200
+  type: LoadBalancer
